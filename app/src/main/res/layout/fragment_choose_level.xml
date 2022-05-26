@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.fragments.chooselevel.ChooseLevelFragment">
+
+
+    <TextView
+        android:id="@+id/tV_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выберите уровень"
+        android:textSize="24sp"
+        android:layout_margin="16dp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btn_test_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="тестовый"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <Button
+        android:id="@+id/btn_easy_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="легкий"
+        android:backgroundTint="@color/holo_green"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <Button
+        android:id="@+id/btn_normal_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="нормальный"
+        android:backgroundTint="@color/orange"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <Button
+        android:id="@+id/btn_hard_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="сложный"
+        android:backgroundTint="@color/red"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+</LinearLayout>
