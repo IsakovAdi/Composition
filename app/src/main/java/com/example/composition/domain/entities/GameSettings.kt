@@ -1,6 +1,5 @@
 package com.example.composition.domain.entities
 
-import android.os.Parcel
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
@@ -11,7 +10,9 @@ data class GameSettings(
     val minCountOfRightAnswers: Int,
     val minPercentOfRightAnswers: Int,
     val gameTimeInSeconds: Int
-):Parcelable {
+):Parcelable
+//{
+
 ////    interface Parcelable быстрее по сравнению с Serializable
 ////    Реализацию можно с помощью плагина     id 'kotlin-parcelize'
 //
@@ -46,4 +47,4 @@ data class GameSettings(
 //            return arrayOfNulls(size)
 //        }
 //    }
-}
+//}

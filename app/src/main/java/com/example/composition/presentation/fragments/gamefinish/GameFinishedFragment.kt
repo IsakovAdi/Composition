@@ -49,25 +49,26 @@ class GameFinishedFragment : Fragment() {
     }
 
     private fun bindViews() {
-        with(binding) {
-            emojiResult.setImageResource(getSmileResId())
-            tvRequiredAnswers.text = String.format(
-                getString(R.string.required_score),
-                args.gameReslut.gameSettings.minCountOfRightAnswers
-            )
-            tvScoreAnswers.text = String.format(
-                getString(R.string.score_answer),
-                args.gameReslut.countOfRightAnswers
-            )
-            requiredPercentage.text = String.format(
-                getString(R.string.required_percentage),
-                args.gameReslut.gameSettings.minPercentOfRightAnswers
-            )
-            scorePercentage.text = String.format(
-                getString(R.string.score_percentage),
-                getPercentOfRightAnswers()
-            )
-        }
+        binding.gameResult = args.gameReslut
+//        with(binding) {
+//            emojiResult.setImageResource(getSmileResId())
+////            tvRequiredAnswers.text = String.format(
+////                getString(R.string.required_score),
+////                args.gameReslut.gameSettings.minCountOfRightAnswers
+////            )
+////            tvScoreAnswers.text = String.format(
+////                getString(R.string.score_answer),
+////                args.gameReslut.countOfRightAnswers
+////            )
+////            requiredPercentage.text = String.format(
+////                getString(R.string.required_percentage),
+////                args.gameReslut.gameSettings.minPercentOfRightAnswers
+////            )
+////            scorePercentage.text = String.format(
+////                getString(R.string.score_percentage),
+////                getPercentOfRightAnswers()
+////            )
+//        }
     }
 
     private fun setupClickListeners() {
@@ -83,21 +84,21 @@ class GameFinishedFragment : Fragment() {
         }
     }
 
-    private fun getSmileResId(): Int {
-        return if (args.gameReslut.winner) {
-            R.drawable.ic_smile
-        } else {
-            R.drawable.ic_cry
-        }
-    }
-
-    private fun getPercentOfRightAnswers() = with(args.gameReslut) {
-        if (countOfQuestions == 0) {
-            0
-        } else {
-            ((countOfRightAnswers / countOfQuestions.toDouble()) * 100).toInt()
-        }
-    }
+//    private fun getSmileResId(): Int {
+//        return if (args.gameReslut.winner) {
+//            R.drawable.ic_smile
+//        } else {
+//            R.drawable.ic_cry
+//        }
+//    }
+//
+//    private fun getPercentOfRightAnswers() = with(args.gameReslut) {
+//        if (countOfQuestions == 0) {
+//            0
+//        } else {
+//            ((countOfRightAnswers / countOfQuestions.toDouble()) * 100).toInt()
+//        }
+//    }
 
 
     override fun onDestroyView() {
